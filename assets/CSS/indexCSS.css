@@ -1,0 +1,323 @@
+ body{
+    background-color: #202020;
+    position: relative;
+    overflow: hidden;
+} 
+.cabecalho{
+    position: fixed; 
+    top: 0; 
+    display: flex;
+    width: 100%; 
+    z-index: 1000; 
+    justify-content: space-around;
+}
+.barra{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    margin-top: 2%;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 25px;
+    
+}
+.hotbar-btn{
+    background: transparent;
+    border-radius: 25px;
+    width: 30%;
+    padding: 2%;
+    font-size: 80%;
+    color: white;
+    font-family: "Silkscreen", sans-serif;
+    cursor: pointer;
+    box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe; 
+    animation: pulsate 1.5s infinite alternate;
+    transition: box-shadow 1.5s ease;
+}
+.hotbar-btn:hover{
+    border-radius: 25px;
+    box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem #00ff00, 
+            0 0 0.8rem #00ff00, 
+            0 0 2.8rem #00ff00, 
+            inset 0 0 1.3rem #00ff00; 
+   }
+
+@keyframes pulsate {
+    100% {
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #bc13fe,
+        0 0 80px #bc13fe,
+        0 0 90px #bc13fe,
+        0 0 100px #bc13fe,
+        0 0 150px #bc13fe;
+    }
+    0% {
+      text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px #bc13fe,
+      0 0 45px #bc13fe,
+      0 0 55px #bc13fe,
+      0 0 70px #bc13fe,
+      0 0 80px #bc13fe;
+  }
+}
+@keyframes pulsate-verde {
+    100% {
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #00ff00, 
+        0 0 80px #00ff00, 
+        0 0 90px #00ff00, 
+        0 0 100px #00ff00, 
+        0 0 150px #00ff00; 
+    }
+    0% {
+      text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px #00ff00, 
+      0 0 45px #00ff00, 
+      0 0 55px #00ff00, 
+      0 0 70px #00ff00, 
+      0 0 80px #00ff00; 
+  }
+}
+
+dialog{
+    background:#282828;
+    border: 1rem;
+}    
+
+.container-popup {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+}
+
+.container-popup .logos {
+    margin: 10%; 
+}
+#contato-popup {
+    width: 35%;
+    height: 40%;
+    box-shadow: 
+    0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #00f, 
+    0 0 0.8rem #00f, 
+    0 0 2.8rem #00f, 
+    inset 0 0 1.3rem #00f; 
+}
+#fechar-popup {
+    position: absolute;
+    top: 0.5%;
+    right: 2.5%;
+    background: transparent;
+    color: #ff0000; 
+    animation: pulsate-vermelho 1s infinite alternate;
+    padding: 3.5%;
+    border: transparent;
+    font-size: 150%;
+    font-weight: bold;
+    font-family: "Silkscreen", sans-serif;
+    cursor: pointer;
+}
+
+@keyframes pulsate-vermelho {
+    100% {
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #ff0000, 
+        0 0 80px #ff0000, 
+        0 0 90px #ff0000, 
+        0 0 100px #ff0000, 
+        0 0 150px #ff0000; 
+    }
+    0% {
+      text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px #ff0000, 
+      0 0 45px #ff0000, 
+      0 0 55px #ff0000, 
+      0 0 70px #ff0000, 
+      0 0 80px #ff0000; 
+  }
+}
+
+@keyframes pulsate-azul {
+    100% {
+        box-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #00f, 
+        0 0 80px #00f, 
+        0 0 90px #00f, 
+        0 0 100px #00f, 
+        0 0 150px #00f; 
+    }
+    0% {
+      box-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px #00f, 
+      0 0 45px #00f, 
+      0 0 55px #00f, 
+      0 0 70px #00f, 
+      0 0 80px #00f; 
+  }
+}
+
+.container-popup .logos img:hover {
+    animation: pulsate-azul 2s infinite alternate;
+    border-radius: 50%; }
+
+    @keyframes mudanca-cor {
+        0% {
+            background-color: #00f; 
+        }
+        50% {
+            background-color: #f00; 
+        }
+        100% {
+            background-color: #800080; 
+        }
+    }
+
+.secao {
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+#secao1 {
+    background-image: url('/assets/Images/Fundo.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+}
+#secao2 {
+    background-image: url('/assets/Images/Fundo2.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    }
+
+.container-sec1{
+    width: 50%;
+    height: 50%;
+    background: transparent; 
+    box-shadow: 0 0 10px red; 
+        h1{
+            font-family: "Silkscreen", sans-serif;
+            font-size: 100%;
+            animation: pulsate-vermelho 2s infinite alternate;
+        }
+        p{
+            font-family: "Silkscreen", sans-serif;
+            font-size: 90%;
+            margin: 3%;
+            margin-top: 5%;
+            overflow-wrap: break-word; 
+        }
+}
+
+.container-sec2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    ul{
+        list-style-type: none;
+    }
+}
+.Prog-Banco{
+    justify-content: center;
+    text-align: center;
+    box-shadow: 
+    0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem orange, 
+    0 0 0.8rem orange, 
+    0 0 2.8rem orange, 
+    inset 0 0 1.3rem orange; 
+    
+    ul{
+        margin: 5%;
+        margin-right: 15%;
+        font-family: "Silkscreen", sans-serif;
+    }
+}
+.Tecnicas{
+    color: orange;
+    font-family: "Silkscreen", sans-serif;
+    animation:pulsate-laranja 1.5s infinite alternate;
+}
+
+.softskills{
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem #00ff00, 
+            0 0 0.8rem #00ff00, 
+            0 0 2.8rem #00ff00, 
+            inset 0 0 1.3rem #00ff00; 
+    margin-left: 5%;
+        ul{
+            margin: 5%;
+            margin-right: 15%;
+            font-family: "Silkscreen", sans-serif;
+            line-height: 200%;
+        }
+        h1{
+            color: #00ff00;
+            animation:pulsate-verde 1.5s infinite alternate
+        }
+}
+
+@keyframes pulsate-laranja {
+    100% {
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px orange, 
+        0 0 80px orange, 
+        0 0 90px orange, 
+        0 0 100px orange, 
+        0 0 150px orange; 
+    }
+    0% {
+      text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px orange, 
+      0 0 45px orange, 
+      0 0 55px orange, 
+      0 0 70px orange, 
+      0 0 80px orange; 
+  }
+}
